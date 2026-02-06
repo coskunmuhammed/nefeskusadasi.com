@@ -16,6 +16,11 @@ const images = [
     { src: '/images/gallery/8.jpg', alt: 'Nefes Villaları Havuz ve Manzara' },
     { src: '/images/gallery/9.jpg', alt: 'Nefes Villaları Salon Detay' },
     { src: '/images/gallery/10.jpg', alt: 'Nefes Villaları Mutfak' },
+    { src: '/images/gallery/11.jpg', alt: 'Nefes Villaları Yatak Odası' },
+    { src: '/images/gallery/12.jpg', alt: 'Nefes Villaları Merdiven ve Sanat' },
+    { src: '/images/gallery/13.jpg', alt: 'Nefes Villaları Yatak Odası ve Balkon' },
+    { src: '/images/gallery/14.jpg', alt: 'Nefes Villaları Banyo' },
+    { src: '/images/gallery/15.jpg', alt: 'Nefes Villaları Ana Yatak Odası' },
 ];
 
 export default function Gallery() {
