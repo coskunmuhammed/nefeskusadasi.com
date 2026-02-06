@@ -21,7 +21,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 mt-32 md:mt-20">
+            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 mt-40 md:mt-20">
                 {/* Left Content */}
                 <div className="max-w-2xl text-white">
 
@@ -33,16 +33,16 @@ export default function Hero() {
                     </p>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 md:gap-8 pt-6 md:pt-8 border-t border-white/10 animate-fade-in-up delay-300">
-                        <div>
+                    <div className="flex justify-between md:grid md:grid-cols-3 gap-4 md:gap-8 pt-6 md:pt-8 border-t border-white/10 animate-fade-in-up delay-300">
+                        <div className="text-center md:text-left flex-1 md:flex-auto">
                             <div className="text-3xl font-bold font-mono">3000m²</div>
                             <div className="text-sm text-gray-400 mt-1">{t.hero.stats_land}</div>
                         </div>
-                        <div>
+                        <div className="text-center md:text-left flex-1 md:flex-auto">
                             <div className="text-3xl font-bold font-mono">8</div>
                             <div className="text-sm text-gray-400 mt-1">{t.hero.stats_villa}</div>
                         </div>
-                        <div>
+                        <div className="text-center md:text-left flex-1 md:flex-auto">
                             <div className="text-3xl font-bold font-mono">4+1</div>
                             <div className="text-sm text-gray-400 mt-1">{t.hero.stats_type}</div>
                         </div>

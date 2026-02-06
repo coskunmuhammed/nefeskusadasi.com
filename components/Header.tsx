@@ -47,12 +47,17 @@ export default function Header() {
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <div className="flex items-center gap-4 relative h-16 w-48 md:w-64">
                     {/* Combined logo image */}
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/images/combined-logo.png"
-                        alt="Nefes Villaları & Remax Yıldız"
-                        className={`absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 h-20 md:h-32 w-auto max-w-none object-contain transition-all duration-300 ${isScrolled || mobileMenuOpen ? 'invert brightness-0' : 'brightness-0 invert'}`}
-                    />
+                    <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 h-20 md:h-32 w-auto max-w-none transition-all duration-300 outline-none focus:outline-none"
+                    >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/images/combined-logo.png"
+                            alt="Nefes Villaları & Remax Yıldız"
+                            className={`h-full w-auto object-contain ${isScrolled || mobileMenuOpen ? 'invert brightness-0' : 'brightness-0 invert'}`}
+                        />
+                    </button>
                     <a
                         href="https://remax.com.tr/tr/ofis/detay/yildiz"
                         target="_blank"
