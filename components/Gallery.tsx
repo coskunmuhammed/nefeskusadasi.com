@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, MouseEvent } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -21,8 +21,16 @@ const images = [
 export default function Gallery() {
     const { t } = useLanguage();
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
 
-    const openModal = (index: number) => setSelectedImage(index);
+    const openModal = (index: number) => {
+        if (!isDragging) {
+            setSelectedImage(index);
+        }
+    };
     const closeModal = () => setSelectedImage(null);
 
     const nextImage = (e: React.MouseEvent) => {
@@ -38,6 +46,36 @@ export default function Gallery() {
             setSelectedImage((selectedImage - 1 + images.length) % images.length);
         }
     };
+
+    // Mouse Drag Handlers
+    const handleMouseDown = (e: MouseEvent) => {
+        if (!scrollRef.current) return;
+        setIsDragging(false); // Assume click initially
+        setStartX(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeft(scrollRef.current.scrollLeft);
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+        if (!scrollRef.current) return;
+        // Only start scrolling if mouse is down (we can check buttons or track separate 'isMouseDown' state)
+        // But better: checks e.buttons === 1 (primary button)
+        if (e.buttons !== 1) return;
+
+        e.preventDefault();
+        setIsDragging(true); // Now we are definitely dragging
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll-fast multiplier
+        scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+        // Delay resetting dragging state slightly to prevent onClick from firing immediately after drag
+        setTimeout(() => setIsDragging(false), 50);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    }
 
     return (
         <section className="py-20 bg-slate-50" id="gallery">
@@ -55,36 +93,39 @@ export default function Gallery() {
 
                     <div className="relative w-full overflow-hidden mask-gradient">
                         {/* Gradient Masks */}
-                        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-                        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+                        <div className="absolute top-0 left-0 w-8 md:w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-8 md:w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
-                        <div className="flex animate-scroll hover:pause gap-6 w-max">
-                            {/* We double the images to create a seamless infinite loop */}
-                            {[...images, ...images].map((img, globalIndex) => {
-                                // Adjust index mapping for modal since we duplicated the array
-                                const originalIndex = globalIndex % images.length;
-                                return (
-                                    <div
-                                        key={globalIndex}
-                                        className="group relative overflow-hidden rounded-xl shadow-md cursor-pointer h-[350px] w-[450px] flex-shrink-0"
-                                        onClick={() => openModal(originalIndex)}
-                                    >
-                                        <Image
-                                            src={img.src}
-                                            alt={img.alt}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        />
-                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <div className="bg-white/90 p-3 rounded-full backdrop-blur-sm shadow-xl transform scale-75 group-hover:scale-100 transition-transform">
-                                                <ZoomIn className="w-6 h-6 text-remax-dark" />
-                                            </div>
+                        <div
+                            ref={scrollRef}
+                            className="flex gap-6 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing pb-8 pt-4 px-4 md:px-0"
+                            onMouseDown={handleMouseDown}
+                            onMouseMove={handleMouseMove}
+                            onMouseUp={handleMouseUp}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            {images.map((img, index) => (
+                                <div
+                                    key={index}
+                                    className="group relative overflow-hidden rounded-xl shadow-md flex-shrink-0 h-[300px] w-[350px] md:h-[350px] md:w-[450px] transition-transform duration-300 hover:-translate-y-1 select-none"
+                                    onClick={() => openModal(index)}
+                                >
+                                    <Image
+                                        src={img.src}
+                                        alt={img.alt}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
+                                        sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
+                                        draggable={false}
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="bg-white/90 p-3 rounded-full backdrop-blur-sm shadow-xl transform scale-75 group-hover:scale-100 transition-transform">
+                                            <ZoomIn className="w-6 h-6 text-remax-dark" />
                                         </div>
                                     </div>
-                                );
-                            })}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
