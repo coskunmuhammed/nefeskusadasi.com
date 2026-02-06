@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Grid, BedDouble, Bath, Utensils, Armchair, DoorOpen, Waves, Sun, MoveRight, Maximize2 } from 'lucide-react';
+import { Grid, BedDouble, Bath, Utensils, Armchair, DoorOpen, Waves, Sun, MoveRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 
@@ -135,9 +135,7 @@ export default function Plans() {
                                         <h3 className="text-3xl font-bold text-white mb-2">{plans[activeTab].title}</h3>
                                         <p className="text-zinc-400">{plans[activeTab].description}</p>
                                     </div>
-                                    <div className="p-3 bg-white/5 rounded-xl border border-white/5 backdrop-blur-md">
-                                        <Maximize2 className="w-6 h-6 text-zinc-300" />
-                                    </div>
+
                                 </div>
 
                                 {/* Grid of Rooms */}

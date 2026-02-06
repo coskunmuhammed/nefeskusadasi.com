@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowDown, Home, Maximize2, Waves, Trees } from 'lucide-react';
+import { ArrowDown, Home, Waves, Trees } from 'lucide-react';
 import { ArrowRight, Phone, User } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
