@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
         <section id="hero" className="relative min-h-screen md:h-screen flex items-center justify-center overflow-hidden">
@@ -26,7 +26,11 @@ export default function Hero() {
                 <div className="max-w-2xl text-white">
 
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up delay-100">
-                        {t.hero.title}
+                        {language === 'tr' ? (
+                            <>Kuşadası'nda <br className="block md:hidden" /> Yeni Bir Nefes</>
+                        ) : (
+                            t.hero.title
+                        )}
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-200 mb-10 font-light max-w-lg animate-fade-in-up delay-200">
                         {t.hero.subtitle}
