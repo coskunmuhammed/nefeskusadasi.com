@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
     LandPlot,
     Home,
@@ -13,7 +14,7 @@ import {
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Summary() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     const items = [
         {
@@ -58,6 +59,8 @@ export default function Summary() {
         }
     ];
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
             <div className="container mx-auto px-4">
@@ -75,7 +78,7 @@ export default function Summary() {
                         {items.map((item, index) => (
                             <div
                                 key={index}
-                                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-1"
+                                className={`group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-1 ${index >= 4 && !isExpanded ? 'hidden md:block' : ''}`}
                             >
                                 <div className="w-12 h-12 bg-blue-50/50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-remax-red/5 transition-colors duration-300">
                                     <item.icon className="w-6 h-6 text-remax-navy group-hover:text-remax-red transition-colors duration-300" />
@@ -89,6 +92,17 @@ export default function Summary() {
                             </div>
                         ))}
                     </div>
+
+                    {!isExpanded && (
+                        <div className="mt-8 text-center md:hidden">
+                            <button
+                                onClick={() => setIsExpanded(true)}
+                                className="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-600 font-medium shadow-sm active:scale-95 transition-all text-sm"
+                            >
+                                {language === 'tr' ? 'Daha Fazla Göster' : 'Show More'}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

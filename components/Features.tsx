@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { CheckCircle2, Briefcase } from 'lucide-react'; // Added Briefcase import
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Features() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const features = [
         t.features.smart_home,
@@ -43,7 +45,7 @@ export default function Features() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     {features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 transition-all hover:shadow-md hover:border-remax-red/20 group">
+                        <div key={idx} className={`flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 transition-all hover:shadow-md hover:border-remax-red/20 group ${idx >= 6 && !isExpanded ? 'hidden md:flex' : ''}`}>
                             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-remax-red group-hover:bg-remax-red group-hover:text-white transition-colors">
                                 <CheckCircle2 className="w-5 h-5" />
                             </div>
@@ -51,6 +53,17 @@ export default function Features() {
                         </div>
                     ))}
                 </div>
+
+                {!isExpanded && (
+                    <div className="text-center md:hidden mb-12">
+                        <button
+                            onClick={() => setIsExpanded(true)}
+                            className="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-600 font-medium shadow-sm active:scale-95 transition-all text-sm"
+                        >
+                            {language === 'tr' ? 'Daha Fazla Göster' : 'Show More'}
+                        </button>
+                    </div>
+                )}
 
                 {/* Detailed Features Section */}
                 <div className="max-w-4xl mx-auto bg-stone-50 p-8 rounded-2xl border border-stone-100">
