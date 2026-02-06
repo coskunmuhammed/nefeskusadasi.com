@@ -160,7 +160,7 @@ export default function Plans() {
 
                                 <div className="mt-auto pt-10 text-center md:text-right">
                                     <p className="text-xs text-zinc-600 font-mono tracking-widest uppercase">
-                                        * Ölçüler brüt değerlerdir
+                                        {t.plans.measure_note}
                                     </p>
                                 </div>
                             </div>
