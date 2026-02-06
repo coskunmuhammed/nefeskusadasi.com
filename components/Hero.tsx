@@ -21,7 +21,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 mt-40 md:mt-20">
+            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 mt-40 md:mt-20 pb-24 md:pb-0">
                 {/* Left Content */}
                 <div className="max-w-2xl text-white">
 
