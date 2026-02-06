@@ -9,7 +9,7 @@ export default function Hero() {
     const { t } = useLanguage();
 
     return (
-        <section id="hero" className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+        <section id="hero" className="relative min-h-screen md:h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10" />
@@ -21,7 +21,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 mt-40 md:mt-20 pb-24 md:pb-0">
+            <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center justify-between gap-12 py-32 md:py-0 md:mt-20">
                 {/* Left Content */}
                 <div className="max-w-2xl text-white">
 
