@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- Top Section (Red) -->
+  <path d="M50 5 C 75 5, 95 25, 95 50 C 95 60, 90 70, 80 80 L 20 80 C 10 70, 5 60, 5 50 C 5 25, 25 5, 50 5 Z" fill="#DC1C2E" />
+  
+  <!-- Middle Section (White) -->
+  <path d="M20 80 L 80 80 L 75 95 L 25 95 Z" fill="#FFFFFF" />
+  
+  <!-- Bottom Section (Blue) -->
+  <path d="M25 95 L 75 95 L 70 110 L 30 110 Z" fill="#003DA5" />
+  
+  <!-- Basket Lines -->
+  <path d="M35 110 L 40 120 L 60 120 L 65 110" fill="#333" />
+  
+  <!-- Shine/Reflection for 3D effect -->
+  <path d="M30 20 Q 40 10, 55 15" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+</svg>
