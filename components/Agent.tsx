@@ -49,7 +49,7 @@ export default function Agent() {
                                 <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-remax-red/10 transition-colors">
                                     <Mail className="w-5 h-5 text-slate-400 group-hover:text-remax-red transition-colors" />
                                 </div>
-                                <span className="text-slate-700 font-medium group-hover:text-remax-dark text-sm break-all">{t.agent.email}</span>
+                                <span className="text-slate-700 font-medium group-hover:text-remax-dark text-xs sm:text-sm break-all">{t.agent.email}</span>
                             </a>
                             <a href={t.agent.website_href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-100 hover:border-remax-red/30 hover:shadow-md transition-all group sm:col-span-2">
                                 <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-remax-red/10 transition-colors">
