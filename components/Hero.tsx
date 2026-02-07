@@ -86,7 +86,7 @@ export default function Hero() {
                                     <input
                                         name="name"
                                         type="text"
-                                        placeholder="Ad Soyad"
+                                        placeholder={t.hero.form_name}
                                         required
                                         className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-remax-red/50 focus:border-remax-red/50 transition-all font-light"
                                     />
@@ -102,7 +102,7 @@ export default function Hero() {
                                     <input
                                         name="phone"
                                         type="tel"
-                                        placeholder="0555 555 55 55"
+                                        placeholder={t.hero.form_phone}
                                         required
                                         className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-remax-red/50 focus:border-remax-red/50 transition-all font-mono"
                                     />
