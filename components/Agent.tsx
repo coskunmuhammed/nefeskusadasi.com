@@ -75,8 +75,8 @@ export default function Agent() {
                         <div className="mt-8 pt-8 border-t border-slate-100 flex justify-center md:justify-start">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/images/acp-logo.png"
-                                alt="ACP & Hall of Fame"
+                                src="/images/remax-badges.png"
+                                alt="Certificates"
                                 className="h-16 object-contain"
                             />
                         </div>
