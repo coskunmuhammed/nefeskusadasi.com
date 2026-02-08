@@ -6,6 +6,7 @@ import Plans from '@/components/Plans';
 import Features from '@/components/Features';
 import SmartHome from '@/components/SmartHome';
 import FAQ from '@/components/FAQ';
+import Office from '@/components/Office';
 import Agent from '@/components/Agent';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -21,6 +22,7 @@ export default function Home() {
       <Plans />
       <Features />
       <SmartHome />
+      <Office />
       <FAQ />
       <Agent />
       <Contact />

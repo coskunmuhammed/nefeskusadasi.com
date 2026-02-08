@@ -182,6 +182,15 @@ export const translations = {
             privacy: "Gizlilik Politikası",
             terms: "Kullanım Şartları"
         },
+        office: {
+            title: "OFİSİMİZ",
+            subtitle: "Neden Biz?",
+            description: "RE/MAX YILDIZ — 20 yıllık tecrübesiyle güven, yenilik ve başarı sunan bir gayrimenkul merkezidir. Türkiye Şampiyonu ofisimiz, uzman danışman kadrosuyla konut, lüks konut ve ticari gayrimenkul alanında fark yaratmaktadır. 16 ticari ve 12 lüks konut uzmanıyla hem yerel hem global hizmet sunuyoruz. RE/MAX International onaylı tek ticari departmana ve 4 Hall of Fame ödülüne sahip bir ofisiz. Sosyal medya, dijital pazarlama ve yapay zeka destekli içerik üretiminde de yenilikçiyiz. İyi niyet ve şeffaflık ilkeleriyle güvenilir, yaratıcı ve sürdürülebilir çözümler sunmayı hedefliyoruz. Uzmanlık alanlarımız: Konut, Lüks Konut, Ticari Gayrimenkul, Proje Satışı.",
+            vision_title: "Vizyonumuz",
+            vision_desc: "RE/MAX Yıldız, yenilikçi çözümler ve müşteri odaklı danışmanlık sunar. Uzman gayrimenkul danışmanları, bireysel ve ticari alanlarda uluslararası standartlarda hizmet verir. Güven, dürüstlük ve profesyonellik ilkeleriyle, lüks konut ve yatırım projelerinde müşterilerin hayallerini gerçeğe dönüştürür. 20 yıllık tecrübeyle, dijital ve yapay zeka destekli çözümler geliştirerek gayrimenkulde geleceğe yön veren bir ofis olmayı hedefler.",
+            mission_title: "Misyonumuz",
+            mission_desc: "Müşteri ve danışman memnuniyetini en üst düzeyde tutmayı hedefliyoruz. Kozyatağı ve İstanbul Anadolu Yakası'ndaki bölgesel uzmanlığımız ve profesyonel ekibimizle etkili çözümler sunuyoruz. Güven, dürüstlük ve profesyonellik ilkelerimizle rehberlik ederken, sosyal medya ve dijital pazarlama ile sürdürülebilir başarı sağlıyoruz. Kalite, etik değerler ve sürekli gelişim prensiplerine bağlı kalarak, her müşteriye özel, veriye dayalı ve sonuç odaklı gayrimenkul danışmanlığı sunmak RE/MAX Yıldız'ın temel misyonudur."
+        },
         faq: {
             title: "Sıkça Sorulan Sorular",
             q1: "Su deposu var mı?",
@@ -376,6 +385,15 @@ export const translations = {
             rights: "All rights reserved.",
             privacy: "Privacy Policy",
             terms: "Terms of Use"
+        },
+        office: {
+            title: "OUR OFFICE",
+            subtitle: "Why Us?",
+            description: "RE/MAX YILDIZ — A real estate center offering trust, innovation, and success with 20 years of experience. Our Turkey Champion office makes a difference in residential, luxury residential, and commercial real estate with its expert consultant staff. We serve both locally and globally with 16 commercial and 12 luxury housing experts. We are an office with the only RE/MAX International approved commercial department and 4 Hall of Fame awards. We are also innovative in social media, digital marketing, and AI-supported content creation. We aim to offer reliable, creative, and sustainable solutions with principles of goodwill and transparency. Our areas of expertise: Residential, Luxury Residential, Commercial Real Estate, Project Sales.",
+            vision_title: "Our Vision",
+            vision_desc: "RE/MAX Yıldız offers innovative solutions and customer-oriented consultancy. Expert real estate consultants provide services at international standards in individual and commercial areas. It turns customers' dreams into reality in luxury housing and investment projects with principles of trust, honesty, and professionalism. With 20 years of experience, it aims to be an office that shapes the future of real estate by developing digital and AI-supported solutions.",
+            mission_title: "Our Mission",
+            mission_desc: "We aim to keep customer and consultant satisfaction at the highest level. We offer effective solutions with our regional expertise in Kozyatağı and Istanbul Anatolian Side and our professional team. While guiding with our principles of trust, honesty, and professionalism, we ensure sustainable success with social media and digital marketing. Providing data-driven and result-oriented real estate consultancy tailored to each customer by adhering to quality, ethical values, and continuous improvement principles is the fundamental mission of RE/MAX Yıldız."
         },
         faq: {
             title: "Frequently Asked Questions",
