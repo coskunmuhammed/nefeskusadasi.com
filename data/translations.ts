@@ -161,7 +161,7 @@ export const translations = {
             email: "ferhatsaglam@remax-yildiz.com",
             website: "www.remax.com.tr/yildiz",
             website_href: "https://www.remax.com.tr/yildiz",
-            linkedin_img: "/images/ferhat-saglam.png"
+            linkedin_img: "/images/ferhat-saglam-new.jpg"
         },
         contact: {
             title: "Bize",
@@ -366,7 +366,7 @@ export const translations = {
             email: "ferhatsaglam@remax-yildiz.com",
             website: "www.remax.com.tr/yildiz",
             website_href: "https://www.remax.com.tr/yildiz",
-            linkedin_img: "/images/ferhat-saglam.png"
+            linkedin_img: "/images/ferhat-saglam-new.jpg"
         },
         contact: {
             title: "Contact",
