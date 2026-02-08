@@ -30,7 +30,7 @@ export default function SmartHome() {
         {
             icon: Zap,
             title: t.smart_home.feature5,
-            description: t.smart_home.feature5_desc // EV Station
+            description: t.smart_home.feature5_desc
         }
     ];
 

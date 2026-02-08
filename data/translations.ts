@@ -141,7 +141,7 @@ export const translations = {
             feature2_desc: "7/24 aktif güvenlik ve alarm sistemi",
             feature3_desc: "İdeal sıcaklık için otomatik ayarlar",
             feature4_desc: "Senaryolu aydınlatma yönetimi",
-            feature5_desc: "Garajınızdaki aracınızın şarj durumunu kontrol edin",
+            feature5_desc: "Garajınızdaki aracınızın şarj durumunu kontrol edin", // updated
             phone_temp: "Salon Sıcaklığı",
             phone_lights: "Işıklar",
             phone_security: "Güvenlik",
