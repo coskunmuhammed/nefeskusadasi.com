@@ -136,6 +136,10 @@ export default function Gallery() {
                             ))}
                         </div>
                     </div>
+
+                    <p className="text-center text-xs text-slate-400 mt-6 italic">
+                        {t.gallery.note}
+                    </p>
                 </div>
             </div>
 

@@ -125,7 +125,8 @@ export const translations = {
             title: "Proje",
             title_highlight: "Görselleri",
             subtitle: "GALERİ",
-            description: "Nefes Villaları'nın büyüleyici dünyasına göz atın."
+            description: "Nefes Villaları'nın büyüleyici dünyasına göz atın.",
+            note: "Paylaşılan görseller proje kapsamında yer alan örnek villaya aittir."
         },
         smart_home: {
             title: "Akıllı Ev",
@@ -329,7 +330,8 @@ export const translations = {
             title: "Project",
             title_highlight: "Gallery",
             subtitle: "GALLERY",
-            description: "Take a look at the fascinating world of Nefes Villas."
+            description: "Take a look at the fascinating world of Nefes Villas.",
+            note: "The images shown belong to the sample villa within the project."
         },
         smart_home: {
             title: "Smart Home",
