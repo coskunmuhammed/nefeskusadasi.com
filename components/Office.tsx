@@ -13,11 +13,16 @@ export default function Office() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header Section */}
-                <div className="text-center mb-16 relative">
-                    <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl md:text-8xl font-black text-white/5 whitespace-nowrap select-none">
-                        {t.office.title}
-                    </h2>
-                    <h3 className="text-3xl md:text-5xl font-bold text-white relative z-10">
+                <div className="text-center mb-16 relative py-20">
+                    {/* Background Text "OFİSİMİZ" */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none overflow-hidden pointer-events-none flex justify-center items-center">
+                        <span className="text-[12rem] md:text-[20rem] font-black text-white/[0.03] whitespace-nowrap leading-none tracking-tighter scale-150 origin-center">
+                            {t.office.title}
+                        </span>
+                    </div>
+
+                    {/* Foreground Text "Neden Biz?" */}
+                    <h3 className="text-5xl md:text-7xl font-bold text-white relative z-10 drop-shadow-2xl tracking-tight">
                         {t.office.subtitle}
                     </h3>
                 </div>
