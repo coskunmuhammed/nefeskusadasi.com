@@ -1,6 +1,6 @@
 'use client';
 
-import { Smartphone, Shield, Thermometer, Lightbulb } from 'lucide-react';
+import { Smartphone, Shield, Thermometer, Lightbulb, Zap } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function SmartHome() {
@@ -26,6 +26,11 @@ export default function SmartHome() {
             icon: Lightbulb,
             title: t.smart_home.feature4,
             description: t.smart_home.feature4_desc
+        },
+        {
+            icon: Zap,
+            title: t.smart_home.feature5,
+            description: t.smart_home.feature5_desc // EV Station
         }
     ];
 
@@ -58,9 +63,9 @@ export default function SmartHome() {
                             {t.smart_home.desc}
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {features.map((feature, index) => (
-                                <div key={index} className="flex flex-col gap-3 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-remax-red/30 transition-all duration-300 group">
+                                <div key={index} className={`flex flex-col gap-3 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-remax-red/30 transition-all duration-300 group ${index === 4 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
                                     <div className="w-10 h-10 rounded-lg bg-remax-red/20 flex items-center justify-center text-remax-red group-hover:scale-110 transition-transform">
                                         <feature.icon className="w-5 h-5" />
                                     </div>
@@ -76,7 +81,7 @@ export default function SmartHome() {
                     {/* Visual / Phone Mockup */}
                     <div className="w-full lg:w-1/2 flex justify-center relative perspective-1000 mt-12 lg:mt-0">
                         {/* Phone Container - iPhone 14/15 Pro Style */}
-                        <div className="relative w-80 max-w-[85vw] h-[620px] bg-black rounded-[3.5rem] shadow-2xl overflow-hidden z-20 transform lg:rotate-[-5deg] hover:rotate-0 transition-all duration-500 border-[8px] border-slate-800 ring-1 ring-white/20">
+                        <div className="relative w-80 max-w-[85vw] h-[650px] bg-black rounded-[3.5rem] shadow-2xl overflow-hidden z-20 transform lg:rotate-[-5deg] hover:rotate-0 transition-all duration-500 border-[8px] border-slate-800 ring-1 ring-white/20">
                             {/* Metallic Frame Gradient */}
                             <div className="absolute inset-0 rounded-[3rem] pointer-events-none border-[6px] border-slate-700/50" />
 
@@ -106,7 +111,7 @@ export default function SmartHome() {
                                 </div>
 
                                 {/* App UI */}
-                                <div className="w-full px-6 pt-12 space-y-5">
+                                <div className="w-full px-6 pt-12 space-y-4">
                                     {/* Header Info */}
                                     <div>
                                         <h3 className="text-white text-xl font-bold">NeFeS</h3>
@@ -121,19 +126,36 @@ export default function SmartHome() {
                                     </div>
 
                                     {/* Control Grid */}
-                                    <div className="grid grid-cols-2 gap-4">
-                                        <div className="aspect-square bg-white/5 rounded-3xl flex flex-col items-center justify-center gap-3 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
-                                            <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400">
-                                                <Lightbulb className="w-5 h-5" />
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="aspect-square bg-white/5 rounded-3xl flex flex-col items-center justify-center gap-2 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+                                            <div className="w-9 h-9 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400">
+                                                <Lightbulb className="w-4 h-4" />
                                             </div>
-                                            <span className="text-xs font-medium text-slate-300">{t.smart_home.phone_lights}</span>
+                                            <span className="text-[10px] font-medium text-slate-300">{t.smart_home.phone_lights}</span>
                                         </div>
-                                        <div className="aspect-square bg-white/5 rounded-3xl flex flex-col items-center justify-center gap-3 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
-                                            <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
-                                                <Shield className="w-5 h-5" />
+                                        <div className="aspect-square bg-white/5 rounded-3xl flex flex-col items-center justify-center gap-2 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+                                            <div className="w-9 h-9 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                                                <Shield className="w-4 h-4" />
                                             </div>
-                                            <span className="text-xs font-medium text-slate-300">{t.smart_home.phone_security}</span>
+                                            <span className="text-[10px] font-medium text-slate-300">{t.smart_home.phone_security}</span>
                                         </div>
+                                    </div>
+
+                                    {/* EV Charging Widget */}
+                                    <div className="w-full bg-white/5 rounded-3xl p-4 flex items-center justify-between border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-9 h-9 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                                                <Zap className="w-4 h-4" />
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <span className="text-xs font-bold text-white max-w-[100px] truncate">{t.smart_home.phone_ev}</span>
+                                                <span className="text-[10px] text-blue-400 flex items-center gap-1">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                                                    %85
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="text-xs font-medium text-white/50">2s 15d</div>
                                     </div>
                                 </div>
 
