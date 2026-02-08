@@ -12,7 +12,7 @@ export const translations = {
         },
         hero: {
             title: "Kuşadası'nda Yeni Bir Nefes",
-            subtitle: "Doğayla iç içe, modern ve lüks bir yaşam sizi bekliyor.",
+            subtitle: "Hayatta hiçbir şey vazgeçilmez değildir; tek bir şey hariç: nefes. Nefes Kuşadası, hepimizin ihtiyaç duyduğu o derin nefesi hissettirmek için; metrekarelerle değil, santimetrekarelere gizlenen inceliklerle, aldığınız her nefeste daha mutlu olmanız için tasarlandı.",
             form_title: "Bilgi Alın",
             form_name: "Adınız Soyadınız",
             form_phone: "Telefon Numaranız",
@@ -217,7 +217,7 @@ export const translations = {
         },
         hero: {
             title: "A New Breath in Kusadasi",
-            subtitle: "A modern and luxurious life intertwined with nature awaits you.",
+            subtitle: "In life, nothing is indispensable; except for one thing: breath. Nefes Kusadasi is designed to make you feel that deep breath we all need; not with square meters, but with subtleties hidden in square centimeters, to make you happier with every breath you take.",
             form_title: "Get Information",
             form_name: "Full Name",
             form_phone: "Phone Number",

@@ -32,7 +32,7 @@ export default function Hero() {
                             t.hero.title
                         )}
                     </h1>
-                    <p className="text-lg md:text-2xl text-gray-200 mb-10 font-light max-w-lg animate-fade-in-up delay-200">
+                    <p className="text-lg md:text-xl text-gray-200 mb-10 font-light max-w-3xl animate-fade-in-up delay-200 leading-relaxed">
                         {t.hero.subtitle}
                     </p>
 
