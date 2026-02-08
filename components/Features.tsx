@@ -21,6 +21,14 @@ export default function Features() {
         t.features.height,
         t.features.coating,
         t.features.landscape,
+        t.features.charging_station,
+        t.features.ac_system,
+        t.features.vacuum,
+        t.features.rain_gutters,
+        t.features.irrigation,
+        t.features.satellite,
+        t.features.fire_alarm,
+        t.features.motion_alarm,
     ];
 
     const detailedFeatures = [

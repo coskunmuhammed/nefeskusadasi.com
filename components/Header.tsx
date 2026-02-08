@@ -73,7 +73,7 @@ export default function Header() {
                     <button onClick={() => scrollToSection('features')} className={`text-sm font-medium transition-colors hover:text-remax-red ${isScrolled ? 'text-white' : 'text-white'}`}>{t.header.features}</button>
                     <button onClick={() => scrollToSection('plans')} className={`text-sm font-medium transition-colors hover:text-remax-red ${isScrolled ? 'text-white' : 'text-white'}`}>{t.header.plans}</button>
                     <button onClick={() => scrollToSection('gallery')} className={`text-sm font-medium transition-colors hover:text-remax-red ${isScrolled ? 'text-white' : 'text-white'}`}>{t.header.gallery}</button>
-                    <button onClick={() => scrollToSection('faq')} className={`text-sm font-medium transition-colors hover:text-remax-red ${isScrolled ? 'text-white' : 'text-white'}`}>{t.header.faq}</button>
+
                     <button onClick={() => scrollToSection('contact')} className={`text-sm font-medium transition-colors hover:text-remax-red ${isScrolled ? 'text-white' : 'text-white'}`}>{t.header.contact}</button>
                 </nav>
 
@@ -121,7 +121,7 @@ export default function Header() {
                     <button onClick={() => scrollToSection('features')} className="text-xl font-medium text-white hover:text-remax-red">{t.header.features}</button>
                     <button onClick={() => scrollToSection('plans')} className="text-xl font-medium text-white hover:text-remax-red">{t.header.plans}</button>
                     <button onClick={() => scrollToSection('gallery')} className="text-xl font-medium text-white hover:text-remax-red">{t.header.gallery}</button>
-                    <button onClick={() => scrollToSection('faq')} className="text-xl font-medium text-white hover:text-remax-red">{t.header.faq}</button>
+
                     <button onClick={() => scrollToSection('contact')} className="text-xl font-medium text-white hover:text-remax-red">{t.header.contact}</button>
 
                     <div className="h-px bg-white/10 my-4" />
