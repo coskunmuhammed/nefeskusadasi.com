@@ -17,12 +17,12 @@ export default function Agent() {
 
                     {/* Agent Image */}
                     <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative z-10">
-                        <div className="w-full h-full rounded-full border-4 border-white shadow-2xl overflow-hidden relative group">
+                        <div className="w-full h-full rounded-full border-4 border-white shadow-2xl overflow-hidden relative group bg-slate-200">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src={t.agent.linkedin_img}
                                 alt={t.agent.name}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
                         <div className="absolute bottom-2 right-2 bg-remax-red text-white p-2 rounded-full shadow-lg z-20 animate-bounce-slow">
