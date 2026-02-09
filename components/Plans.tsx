@@ -25,7 +25,7 @@ export default function Plans() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                        {t.plans.title}
+                        {t.plans.title} <span className="text-remax-red">{t.plans.title_highlight}</span>
                     </h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto">
                         {t.plans.description}
@@ -38,8 +38,8 @@ export default function Plans() {
                         <button
                             onClick={() => setActiveTab('ground')}
                             className={`px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 flex items-center gap-3 ${activeTab === 'ground'
-                                    ? 'bg-remax-red text-white shadow-lg shadow-remax-red/25 scale-105'
-                                    : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
+                                ? 'bg-remax-red text-white shadow-lg shadow-remax-red/25 scale-105'
+                                : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
                                 }`}
                         >
                             <span className="w-8 h-8 rounded-lg bg-black/20 flex items-center justify-center text-sm font-bold">Z</span>
@@ -48,8 +48,8 @@ export default function Plans() {
                         <button
                             onClick={() => setActiveTab('upper')}
                             className={`px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 flex items-center gap-3 ${activeTab === 'upper'
-                                    ? 'bg-remax-red text-white shadow-lg shadow-remax-red/25 scale-105'
-                                    : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
+                                ? 'bg-remax-red text-white shadow-lg shadow-remax-red/25 scale-105'
+                                : 'bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white'
                                 }`}
                         >
                             <span className="w-8 h-8 rounded-lg bg-black/20 flex items-center justify-center text-sm font-bold">1</span>
@@ -113,6 +113,6 @@ export default function Plans() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
