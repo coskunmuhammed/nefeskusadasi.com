@@ -111,7 +111,7 @@ export default function ProjectVideo() {
                     )}
 
                     {/* Bottom Controls */}
-                    <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-between transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-between transition-opacity duration-300 ${showControls ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                         <div className="flex gap-4">
                             <button
                                 onClick={togglePlay}
