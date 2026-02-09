@@ -45,8 +45,8 @@ export const translations = {
             smart_desc: "Tam Otomasyon"
         },
         video: {
-            title: "Proje",
-            title_highlight: "Videosu",
+            title: "Villa",
+            title_highlight: "Tanıtım Filmi",
             subtitle: "TANITIM",
             description: "Nefes Villaları'nın ayrıcalıklı dünyasını keşfedin."
         },
@@ -256,8 +256,8 @@ export const translations = {
             smart_desc: "Full Automation"
         },
         video: {
-            title: "Project",
-            title_highlight: "Video",
+            title: "Villa",
+            title_highlight: "Introduction Film",
             subtitle: "INTRODUCTION",
             description: "Discover the exclusive world of Nefes Villas."
         },
