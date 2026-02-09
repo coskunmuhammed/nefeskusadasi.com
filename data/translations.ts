@@ -25,7 +25,7 @@ export const translations = {
             stats_type: "Tip"
         },
         summary: {
-            title: "Proje Özeti",
+            title: "Villa Özeti",
             description: "Nefes Villaları, konforunuz ve yaşam kaliteniz düşünülerek titizlikle tasarlandı.",
             land: "Toplam 3 dönüm (3000 m²) arazi",
             land_desc: "Geniş peyzaj alanı",
@@ -90,7 +90,7 @@ export const translations = {
             info_bath: "INFO: Her odada özel banyo ve tuvalet ünitesi bulunmaktadır."
         },
         features: {
-            title: "Proje",
+            title: "Villa",
             title_highlight: "Özellikleri",
             desc: "Hayatınızı kolaylaştıracak ve konforunuzu artıracak modern donanımlar.",
             smart_home: "Akıllı Ev Sistemi",
@@ -128,8 +128,8 @@ export const translations = {
             laundry_desc: "Balkon (6m²) + İç alan (3.5m²), dolaplı ve düzenli."
         },
         gallery: {
-            title: "Proje",
-            title_highlight: "Görselleri",
+            title: "Villa",
+            title_highlight: "Tanıtım Görselleri",
             subtitle: "GALERİ",
             description: "Nefes Villaları'nın büyüleyici dünyasına göz atın.",
             note: "Paylaşılan görseller proje kapsamında yer alan örnek villaya aittir."
@@ -236,7 +236,7 @@ export const translations = {
             stats_type: "Type"
         },
         summary: {
-            title: "Project Summary",
+            title: "Villa Summary",
             description: "Nefes Villas has been meticulously designed with your comfort and quality of life in mind.",
             land: "Total 3 acres (3000 m²) land",
             land_desc: "Large landscape area",
@@ -301,7 +301,7 @@ export const translations = {
             info_bath: "INFO: Each room has a private bathroom and toilet unit."
         },
         features: {
-            title: "Project",
+            title: "Villa",
             title_highlight: "Features",
             desc: "Modern equipment that will make your life easier and increase your comfort.",
             smart_home: "Smart Home System",
@@ -339,7 +339,7 @@ export const translations = {
             laundry_desc: "Balcony (6m²) + Interior (3.5m²), with cabinets."
         },
         gallery: {
-            title: "Project",
+            title: "Villa",
             title_highlight: "Gallery",
             subtitle: "GALLERY",
             description: "Take a look at the fascinating world of Nefes Villas.",
