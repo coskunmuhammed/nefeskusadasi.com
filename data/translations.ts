@@ -44,6 +44,12 @@ export const translations = {
             smart: "Akıllı Ev Sistemi",
             smart_desc: "Tam Otomasyon"
         },
+        video: {
+            title: "Proje",
+            title_highlight: "Videosu",
+            subtitle: "TANITIM",
+            description: "Nefes Villaları'nın ayrıcalıklı dünyasını keşfedin."
+        },
         plans: {
             title: "Mimari",
             title_highlight: "Planlar",
@@ -248,6 +254,12 @@ export const translations = {
             pool_desc: "Luxury details",
             smart: "Smart Home System",
             smart_desc: "Full Automation"
+        },
+        video: {
+            title: "Project",
+            title_highlight: "Video",
+            subtitle: "INTRODUCTION",
+            description: "Discover the exclusive world of Nefes Villas."
         },
         plans: {
             title: "Architectural",

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Summary from '@/components/Summary';
+import ProjectVideo from '@/components/ProjectVideo';
 import Gallery from '@/components/Gallery';
 import Plans from '@/components/Plans';
 import Features from '@/components/Features';
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <div id="summary" />
       <Summary />
+      <ProjectVideo />
       <Gallery />
       <Plans />
       <Features />
