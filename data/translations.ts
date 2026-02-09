@@ -25,7 +25,7 @@ export const translations = {
             stats_type: "Tip"
         },
         summary: {
-            title: "Villa Özeti",
+            title: "Seçkin Yaşam Detayları",
             description: "Nefes Villaları, konforunuz ve yaşam kaliteniz düşünülerek titizlikle tasarlandı.",
             land: "Toplam 3 dönüm (3000 m²) arazi",
             land_desc: "Geniş peyzaj alanı",
@@ -236,7 +236,7 @@ export const translations = {
             stats_type: "Type"
         },
         summary: {
-            title: "Villa Summary",
+            title: "Exclusive Living Details",
             description: "Nefes Villas has been meticulously designed with your comfort and quality of life in mind.",
             land: "Total 3 acres (3000 m²) land",
             land_desc: "Large landscape area",
