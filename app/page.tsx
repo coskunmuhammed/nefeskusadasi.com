@@ -5,6 +5,7 @@ import Gallery from '@/components/Gallery';
 import Plans from '@/components/Plans';
 import Features from '@/components/Features';
 import SmartHome from '@/components/SmartHome';
+import VideoPopup from '@/components/VideoPopup';
 
 import Office from '@/components/Office';
 import Agent from '@/components/Agent';
@@ -14,6 +15,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
+      <VideoPopup />
       <Header />
       <Hero />
       <div id="summary" />
