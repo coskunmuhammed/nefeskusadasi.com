@@ -51,8 +51,8 @@ export const translations = {
             description: "Nefes Villaları'nın ayrıcalıklı dünyasını keşfedin."
         },
         plans: {
-            title: "Mimari",
-            title_highlight: "Planlar",
+            title: "Yaşam Alanı",
+            title_highlight: "Ölçüleri",
             description: "Modern yaşamın gereksinimlerine göre tasarlanmış, fonksiyonel ve estetik detaylarla bezeli yaşam alanları.",
             ground_title: "Alt Kat Planı",
             ground_subtitle: "ZEMİN KAT // GENEL YAŞAM",
@@ -262,8 +262,8 @@ export const translations = {
             description: "Discover the exclusive world of Nefes Villas."
         },
         plans: {
-            title: "Architectural",
-            title_highlight: "Plans",
+            title: "Living Area",
+            title_highlight: "Dimensions",
             description: "Living spaces designed according to modern life requirements, adorned with functional and aesthetic details.",
             ground_title: "Ground Floor",
             ground_subtitle: "GROUND FLOOR // LIVING AREA",
