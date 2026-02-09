@@ -9,7 +9,7 @@ import {
     Trees,
     Layout,
     Waves,
-    Car
+    Smartphone
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -53,9 +53,9 @@ export default function Summary() {
             description: t.summary.pool_desc
         },
         {
-            icon: Car,
-            text: t.summary.car,
-            description: t.summary.car_desc
+            icon: Smartphone,
+            text: t.summary.smart,
+            description: t.summary.smart_desc
         }
     ];
 

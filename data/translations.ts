@@ -41,8 +41,8 @@ export const translations = {
             base_desc: "İdeal yerleşim",
             pool: "Özel havuz, özel otopark",
             pool_desc: "Lüks detaylar",
-            car: "Özel otopark",
-            car_desc: "Her villaya özel"
+            smart: "Akıllı Ev Sistemi",
+            smart_desc: "Tam Otomasyon"
         },
         plans: {
             title: "Mimari",
@@ -246,8 +246,8 @@ export const translations = {
             base_desc: "Ideal settlement",
             pool: "Private pool, private parking",
             pool_desc: "Luxury details",
-            car: "Private parking",
-            car_desc: "Private for each villa"
+            smart: "Smart Home System",
+            smart_desc: "Full Automation"
         },
         plans: {
             title: "Architectural",
