@@ -12,14 +12,17 @@ export default function ProjectVideo() {
     const [showControls, setShowControls] = useState(true);
     const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    const togglePlay = () => {
+    const togglePlay = async () => {
         if (videoRef.current) {
-            if (isPlaying) {
-                videoRef.current.pause();
-            } else {
-                videoRef.current.play();
+            try {
+                if (isPlaying) {
+                    videoRef.current.pause();
+                } else {
+                    await videoRef.current.play();
+                }
+            } catch (error) {
+                console.error("Video playback failed:", error);
             }
-            setIsPlaying(!isPlaying);
         }
     };
 
@@ -96,6 +99,7 @@ export default function ProjectVideo() {
                         className="w-full h-full object-cover cursor-pointer"
                         onClick={togglePlay}
                         playsInline
+                        preload="auto"
                     />
 
                     {/* Overlay Play Button (Initial or Paused) */}
